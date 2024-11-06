@@ -1,0 +1,87 @@
+#VRML_SIM R2023b utf8
+# Describe the functionality of your PROTO here.
+# template language: javascript
+
+
+EXTERNPROTO "WheelMesh.proto"
+EXTERNPROTO "SubWheelMesh.proto"
+
+PROTO wailun [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 0 1 0
+  field SFString name "solid"
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+    WheelMesh {
+    }
+    Pose {
+      translation 0 0 0.036
+      rotation 0 0 -1 0.785402
+      children [
+       SubWheelMesh {
+       }
+     ]
+   }
+   Pose {
+     translation 0.0311 0 0.018
+     rotation -0.318977 0.770074 -0.552484 1.28666
+     children [
+       SubWheelMesh {
+       }
+     ]
+   }
+   Pose {
+     translation 0.0311 0 -0.018
+     rotation -0.373673 0.902122 -0.21574 2.18123
+     children [
+       SubWheelMesh {
+       }
+     ]
+   }
+   Pose {
+     translation 0 0 -0.036
+     rotation -0.382685 0.923879 0 3.14159
+     children [
+       SubWheelMesh {
+       }
+     ]
+   }
+   Pose {
+     translation -0.0311 0 -0.018
+     rotation -0.373673 0.902122 0.21574 4.10195
+     children [
+       SubWheelMesh {
+       }
+     ]
+   }
+   Pose {
+     translation -0.0311 0 0.018
+     rotation -0.318977 0.770074 0.552484 4.99652
+     children [
+       SubWheelMesh {
+       }
+     ]
+   }
+ ]
+ contactMaterial "ExteriorWheelMat"
+ boundingObject Pose {
+   rotation 1 0 0 -1.5708
+   children [
+     Cylinder {
+       height 0.072
+       radius 0.05
+       subdivision 24
+     }
+   ]
+ }
+ physics Physics {
+   density -1
+   mass 0.4
+}
+  } 
+}
