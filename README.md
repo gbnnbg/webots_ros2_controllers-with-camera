@@ -1,6 +1,7 @@
 ros2 version:jazzy
 ubuntu version:24.04
 webots version:2023b\2024a
+robot:kuka youbot
 1.Open a terminal in the src directory and type colcon build.
 2.Copy the protos folder into this directory..../youbot/src/install/youbot/share/youbot
 3.Enter the following command：source install/local_setup.bash
