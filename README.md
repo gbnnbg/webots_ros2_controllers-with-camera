@@ -12,7 +12,7 @@ robot:kuka youbot
 
 1.在src目录下打开终端并输入colcon build
 2.将protos文件夹复制到..../youbot/src/install/youbot/share/youbot
-3.输入以下命令install/local_setup.bash
+3.输入以下命令source install/local_setup.bash
 4.输入以下命令以启动模拟ros2 launch youbot robot_launch.py
 5.使用teleop_keyboard控制机器人移动
 6.输入以下命令以查看摄像头数据ros2 topic echo /camera/image_color
