@@ -3,6 +3,7 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
 
 WorldInfo {
   info [
@@ -39,7 +40,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.17911156961388014 -0.21449511928164008 0.9601619079274116 4.36804473163784
-  position 0.3487317017372398 2.020940956677153 1.21536466992255
+  position 6.64048214561592 20.221549083706936 10.43802597252776
   follow "youBot"
 }
 TexturedBackground {
@@ -47,7 +48,7 @@ TexturedBackground {
 TexturedBackgroundLight {
 }
 Floor {
-  size 100 100
+  size 15 15
 }
 Robot {
   translation 0 0 0.102838
@@ -1714,4 +1715,8 @@ Robot {
   controllerArgs [
     "demo"
   ]
+}
+Table {
+  translation 5.85 1.8 0
+  size 2 2 1.1
 }
