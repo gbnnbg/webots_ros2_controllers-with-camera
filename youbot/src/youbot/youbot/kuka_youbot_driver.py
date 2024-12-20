@@ -43,11 +43,15 @@ class Kuka_Youbot_Driver:
 
         forward_speed = self.__target_twist.linear.x
         angular_speed = self.__target_twist.angular.z
+        turn_speed = self.__target_twist.angular.y
 
-        command_motor_left_foward = forward_speed + angular_speed 
-        command_motor_right_foward = forward_speed - angular_speed
-        command_motor_left_back = forward_speed - angular_speed
-        command_motor_right_back = forward_speed + angular_speed
+        s=0.158
+        d=0.228 
+
+        command_motor_left_foward = forward_speed + angular_speed - (d+s)*turn_speed
+        command_motor_right_foward = forward_speed - angular_speed + (d+s)*turn_speed
+        command_motor_left_back = forward_speed - angular_speed - (d+s)*turn_speed
+        command_motor_right_back = forward_speed + angular_speed + (d+s)*turn_speed
 
         self.__right_foward_motor.setVelocity(command_motor_right_foward)
         self.__left_foward_motor.setVelocity(command_motor_left_foward)
