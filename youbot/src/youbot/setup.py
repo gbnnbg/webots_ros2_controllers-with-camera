@@ -10,7 +10,6 @@ data_files.append(('share/' + package_name + '/launch', ['launch/robot_launch.py
 data_files.append(('share/' + package_name + '/worlds', ['worlds/youbot.wbt']))
 data_files.append(('share/' + package_name + '/resource', ['resource/youbot.urdf']))
 data_files.append(('share/' + package_name, ['package.xml']))
-data_files.append(('share/' + package_name + '/controllers/camera_test', ['controllers/camera_test/camera_test.py']))
 
 for root, dirs, files in os.walk('protos'):
     files_in_dir = [os.path.join(root, file) for file in files]  # 获取当前目录中的所有文件
