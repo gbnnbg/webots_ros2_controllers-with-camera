@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<robot name="youBot">
+    <webots>
+        <device reference="camera" type="Camera">
+            <ros>
+                <topicName>/camera</topicName>
+            </ros>
+        </device>
+        <plugin type="youbot.kuka_youbot_driver.Kuka_Youbot_Driver" />
+    </webots>
+</robot>
